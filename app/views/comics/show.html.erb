@@ -1,0 +1,11 @@
+<img src=<%= @comic["thumbnail"]["path"] + "/portrait_incredible." + @comic["thumbnail"]["extension"] %>>
+<h1>Title: <%= @comic["title"] %></h1>
+<h2>Price: $<%= @comic["prices"][0]["price"] %></h2>
+<h4><%= @comic["description"] %></h4>
+<% @comic["characters"]["items"].each do |character| %>
+	<a href=<%= "/characters/" + character["resourceURI"].split('/').last() %>><%= character["name"] %></a>
+<% end %>
+<br>
+<br>
+<a href=<%= @comic["urls"][0]["url"] %>>More Info</a>
+<%= link_to "Back", :back %>

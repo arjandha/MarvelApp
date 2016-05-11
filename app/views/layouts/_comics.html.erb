@@ -1,0 +1,6 @@
+<% @comics.each do |comic| %>
+    <a href=<%="/comics/" + comic["id"].to_s %> >
+      <img src=<%= comic["thumbnail"]["path"] + "/standard_xlarge." + comic["thumbnail"]["extension"] %>>
+      <!--<p><%= comic["title"] %></p>-->
+    </a>
+<% end %>

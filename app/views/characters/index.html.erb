@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Characters List</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div id="scrolling-display">
+              <%= render :partial => 'layouts/characters'%>
+            </div>
+
+            <div id="infinite_scrolling" class="infinite-scrolling">
+            </div>
+
+        </div>
+    </div>
+</div>

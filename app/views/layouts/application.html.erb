@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MarvelApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+      <ul class="nav navbar-nav">
+			<li><%=link_to "Comics", comics_path%></li>
+			<li><%=link_to "Characters", characters_path %></li>
+		</ul>
+	</div>
+</nav>
+
+
+<%= yield %>
+
+</body>
+</html>

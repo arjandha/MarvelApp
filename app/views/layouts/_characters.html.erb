@@ -1,0 +1,5 @@
+<% @characters.each do |character| %>
+    <a href=<%="/characters/" + character["id"].to_s %> >
+      <img src=<%= character["thumbnail"]["path"] + "/standard_xlarge." + character["thumbnail"]["extension"] %>>
+    </a>
+<% end %>
